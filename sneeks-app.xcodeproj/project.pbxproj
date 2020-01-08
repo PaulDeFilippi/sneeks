@@ -8,26 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		4FF5ADF423C685CF00B98A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF323C685CF00B98A20 /* AppDelegate.swift */; };
-		4FF5ADF623C685CF00B98A20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF523C685CF00B98A20 /* SceneDelegate.swift */; };
 		4FF5ADF823C685CF00B98A20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF723C685CF00B98A20 /* ViewController.swift */; };
 		4FF5ADFB23C685CF00B98A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF923C685CF00B98A20 /* Main.storyboard */; };
 		4FF5ADFD23C685D300B98A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5ADFC23C685D300B98A20 /* Assets.xcassets */; };
 		4FF5AE0023C685D300B98A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5ADFE23C685D300B98A20 /* LaunchScreen.storyboard */; };
+		4FF5AE0E23C6926300B98A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5AE0D23C6926300B98A20 /* AppDelegate.swift */; };
+		4FF5AE1223C6926300B98A20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5AE1123C6926300B98A20 /* ViewController.swift */; };
+		4FF5AE1523C6926300B98A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5AE1323C6926300B98A20 /* Main.storyboard */; };
+		4FF5AE1A23C6926600B98A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5AE1823C6926600B98A20 /* LaunchScreen.storyboard */; };
+		4FF5AE2023C6938900B98A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5ADFC23C685D300B98A20 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4FF5ADF023C685CF00B98A20 /* sneeks-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sneeks-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF5ADF323C685CF00B98A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FF5ADF523C685CF00B98A20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4FF5ADF723C685CF00B98A20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4FF5ADFA23C685CF00B98A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FF5ADFC23C685D300B98A20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FF5ADFF23C685D300B98A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FF5AE0123C685D300B98A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF5AE0B23C6926300B98A20 /* sneeks-admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sneeks-admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF5AE0D23C6926300B98A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4FF5AE1123C6926300B98A20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4FF5AE1423C6926300B98A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4FF5AE1923C6926600B98A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4FF5AE1B23C6926600B98A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4FF5ADED23C685CF00B98A20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF5AE0823C6926300B98A20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,7 +56,9 @@
 		4FF5ADE723C685CF00B98A20 = {
 			isa = PBXGroup;
 			children = (
+				4FF5AE1F23C692F800B98A20 /* Shared */,
 				4FF5ADF223C685CF00B98A20 /* sneeks-app */,
+				4FF5AE0C23C6926300B98A20 /* sneeks-admin */,
 				4FF5ADF123C685CF00B98A20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				4FF5ADF023C685CF00B98A20 /* sneeks-app.app */,
+				4FF5AE0B23C6926300B98A20 /* sneeks-admin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,14 +76,32 @@
 			isa = PBXGroup;
 			children = (
 				4FF5ADF323C685CF00B98A20 /* AppDelegate.swift */,
-				4FF5ADF523C685CF00B98A20 /* SceneDelegate.swift */,
 				4FF5ADF723C685CF00B98A20 /* ViewController.swift */,
 				4FF5ADF923C685CF00B98A20 /* Main.storyboard */,
-				4FF5ADFC23C685D300B98A20 /* Assets.xcassets */,
 				4FF5ADFE23C685D300B98A20 /* LaunchScreen.storyboard */,
 				4FF5AE0123C685D300B98A20 /* Info.plist */,
 			);
 			path = "sneeks-app";
+			sourceTree = "<group>";
+		};
+		4FF5AE0C23C6926300B98A20 /* sneeks-admin */ = {
+			isa = PBXGroup;
+			children = (
+				4FF5AE0D23C6926300B98A20 /* AppDelegate.swift */,
+				4FF5AE1123C6926300B98A20 /* ViewController.swift */,
+				4FF5AE1323C6926300B98A20 /* Main.storyboard */,
+				4FF5AE1823C6926600B98A20 /* LaunchScreen.storyboard */,
+				4FF5AE1B23C6926600B98A20 /* Info.plist */,
+			);
+			path = "sneeks-admin";
+			sourceTree = "<group>";
+		};
+		4FF5AE1F23C692F800B98A20 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4FF5ADFC23C685D300B98A20 /* Assets.xcassets */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +124,23 @@
 			productReference = 4FF5ADF023C685CF00B98A20 /* sneeks-app.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4FF5AE0A23C6926300B98A20 /* sneeks-admin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF5AE1C23C6926600B98A20 /* Build configuration list for PBXNativeTarget "sneeks-admin" */;
+			buildPhases = (
+				4FF5AE0723C6926300B98A20 /* Sources */,
+				4FF5AE0823C6926300B98A20 /* Frameworks */,
+				4FF5AE0923C6926300B98A20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sneeks-admin";
+			productName = "sneeks-admin";
+			productReference = 4FF5AE0B23C6926300B98A20 /* sneeks-admin.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +152,9 @@
 				ORGANIZATIONNAME = "Paul Defilippi";
 				TargetAttributes = {
 					4FF5ADEF23C685CF00B98A20 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					4FF5AE0A23C6926300B98A20 = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
@@ -116,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				4FF5ADEF23C685CF00B98A20 /* sneeks-app */,
+				4FF5AE0A23C6926300B98A20 /* sneeks-admin */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +189,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FF5AE0923C6926300B98A20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF5AE1A23C6926600B98A20 /* LaunchScreen.storyboard in Resources */,
+				4FF5AE2023C6938900B98A20 /* Assets.xcassets in Resources */,
+				4FF5AE1523C6926300B98A20 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +208,15 @@
 			files = (
 				4FF5ADF823C685CF00B98A20 /* ViewController.swift in Sources */,
 				4FF5ADF423C685CF00B98A20 /* AppDelegate.swift in Sources */,
-				4FF5ADF623C685CF00B98A20 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF5AE0723C6926300B98A20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FF5AE1223C6926300B98A20 /* ViewController.swift in Sources */,
+				4FF5AE0E23C6926300B98A20 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +235,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				4FF5ADFF23C685D300B98A20 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4FF5AE1323C6926300B98A20 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FF5AE1423C6926300B98A20 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4FF5AE1823C6926600B98A20 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4FF5AE1923C6926600B98A20 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -287,6 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 963UXK3MCT;
 				INFOPLIST_FILE = "sneeks-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,11 +398,48 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 963UXK3MCT;
 				INFOPLIST_FILE = "sneeks-app/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pauldefilippi.sneeks-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4FF5AE1D23C6926600B98A20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 963UXK3MCT;
+				INFOPLIST_FILE = "sneeks-admin/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pauldefilippi.sneeks-admin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4FF5AE1E23C6926600B98A20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 963UXK3MCT;
+				INFOPLIST_FILE = "sneeks-admin/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pauldefilippi.sneeks-admin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,6 +463,15 @@
 			buildConfigurations = (
 				4FF5AE0523C685D300B98A20 /* Debug */,
 				4FF5AE0623C685D300B98A20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FF5AE1C23C6926600B98A20 /* Build configuration list for PBXNativeTarget "sneeks-admin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FF5AE1D23C6926600B98A20 /* Debug */,
+				4FF5AE1E23C6926600B98A20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
