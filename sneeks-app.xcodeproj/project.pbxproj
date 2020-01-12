@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FC8558123CB86570084A344 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8558023CB86570084A344 /* GoogleService-Info.plist */; };
+		4FC8558323CB900D0084A344 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8558223CB900D0084A344 /* GoogleService-Info.plist */; };
+		4FC8558923CB9F250084A344 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8558823CB9F250084A344 /* LoginVC.swift */; };
+		4FC8558B23CB9F400084A344 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8558A23CB9F400084A344 /* RegisterVC.swift */; };
+		4FC8558E23CBB37E0084A344 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8558D23CBB37E0084A344 /* Extentions.swift */; };
 		4FF5ADF423C685CF00B98A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF323C685CF00B98A20 /* AppDelegate.swift */; };
 		4FF5ADF823C685CF00B98A20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF723C685CF00B98A20 /* ViewController.swift */; };
 		4FF5ADFB23C685CF00B98A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF923C685CF00B98A20 /* Main.storyboard */; };
@@ -18,9 +23,18 @@
 		4FF5AE1A23C6926600B98A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5AE1823C6926600B98A20 /* LaunchScreen.storyboard */; };
 		4FF5AE2023C6938900B98A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5ADFC23C685D300B98A20 /* Assets.xcassets */; };
 		4FF5AE2223C6A7C100B98A20 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5AE2123C6A7C100B98A20 /* LoginStoryboard.storyboard */; };
+		71F110A653736DE671DBD80C /* Pods_sneeks_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F479A540EF6FE73FD1094AFA /* Pods_sneeks_app.framework */; };
+		9313ECD6B5DBC54E8EF8ED31 /* Pods_sneeks_admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2B699857E629CFC123DD0F5 /* Pods_sneeks_admin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34B16B0EBF0771CC032A2687 /* Pods-sneeks-admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sneeks-admin.debug.xcconfig"; path = "Target Support Files/Pods-sneeks-admin/Pods-sneeks-admin.debug.xcconfig"; sourceTree = "<group>"; };
+		3938D0C3845F85A4E2B488E3 /* Pods-sneeks-admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sneeks-admin.release.xcconfig"; path = "Target Support Files/Pods-sneeks-admin/Pods-sneeks-admin.release.xcconfig"; sourceTree = "<group>"; };
+		4FC8558023CB86570084A344 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FC8558223CB900D0084A344 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FC8558823CB9F250084A344 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4FC8558A23CB9F400084A344 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		4FC8558D23CBB37E0084A344 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		4FF5ADF023C685CF00B98A20 /* sneeks-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sneeks-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF5ADF323C685CF00B98A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FF5ADF723C685CF00B98A20 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +49,10 @@
 		4FF5AE1923C6926600B98A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FF5AE1B23C6926600B98A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FF5AE2123C6A7C100B98A20 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		8E70B392EE536AA95BD579E3 /* Pods-sneeks-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sneeks-app.debug.xcconfig"; path = "Target Support Files/Pods-sneeks-app/Pods-sneeks-app.debug.xcconfig"; sourceTree = "<group>"; };
+		D2B699857E629CFC123DD0F5 /* Pods_sneeks_admin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sneeks_admin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F479A540EF6FE73FD1094AFA /* Pods_sneeks_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sneeks_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F73457E35967EF635A5006C0 /* Pods-sneeks-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sneeks-app.release.xcconfig"; path = "Target Support Files/Pods-sneeks-app/Pods-sneeks-app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F110A653736DE671DBD80C /* Pods_sneeks_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,12 +68,67 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9313ECD6B5DBC54E8EF8ED31 /* Pods_sneeks_admin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25C144DD4EDF05221411B467 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34B16B0EBF0771CC032A2687 /* Pods-sneeks-admin.debug.xcconfig */,
+				3938D0C3845F85A4E2B488E3 /* Pods-sneeks-admin.release.xcconfig */,
+				8E70B392EE536AA95BD579E3 /* Pods-sneeks-app.debug.xcconfig */,
+				F73457E35967EF635A5006C0 /* Pods-sneeks-app.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4FC8558423CB9E6C0084A344 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8558823CB9F250084A344 /* LoginVC.swift */,
+				4FC8558A23CB9F400084A344 /* RegisterVC.swift */,
+				4FF5ADF323C685CF00B98A20 /* AppDelegate.swift */,
+				4FF5ADF723C685CF00B98A20 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4FC8558523CB9E7F0084A344 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4FC8558623CB9E890084A344 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4FC8558723CB9E960084A344 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4FF5AE2123C6A7C100B98A20 /* LoginStoryboard.storyboard */,
+				4FF5ADF923C685CF00B98A20 /* Main.storyboard */,
+				4FF5ADFE23C685D300B98A20 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4FC8558C23CBB3270084A344 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8558D23CBB37E0084A344 /* Extentions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		4FF5ADE723C685CF00B98A20 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +136,8 @@
 				4FF5ADF223C685CF00B98A20 /* sneeks-app */,
 				4FF5AE0C23C6926300B98A20 /* sneeks-admin */,
 				4FF5ADF123C685CF00B98A20 /* Products */,
+				25C144DD4EDF05221411B467 /* Pods */,
+				D27999FD08330D28C78618AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,11 +153,11 @@
 		4FF5ADF223C685CF00B98A20 /* sneeks-app */ = {
 			isa = PBXGroup;
 			children = (
-				4FF5ADF323C685CF00B98A20 /* AppDelegate.swift */,
-				4FF5ADF723C685CF00B98A20 /* ViewController.swift */,
-				4FF5AE2123C6A7C100B98A20 /* LoginStoryboard.storyboard */,
-				4FF5ADF923C685CF00B98A20 /* Main.storyboard */,
-				4FF5ADFE23C685D300B98A20 /* LaunchScreen.storyboard */,
+				4FC8558623CB9E890084A344 /* Model */,
+				4FC8558523CB9E7F0084A344 /* View */,
+				4FC8558423CB9E6C0084A344 /* Controller */,
+				4FC8558723CB9E960084A344 /* Storyboards */,
+				4FC8558023CB86570084A344 /* GoogleService-Info.plist */,
 				4FF5AE0123C685D300B98A20 /* Info.plist */,
 			);
 			path = "sneeks-app";
@@ -94,6 +170,7 @@
 				4FF5AE1123C6926300B98A20 /* ViewController.swift */,
 				4FF5AE1323C6926300B98A20 /* Main.storyboard */,
 				4FF5AE1823C6926600B98A20 /* LaunchScreen.storyboard */,
+				4FC8558223CB900D0084A344 /* GoogleService-Info.plist */,
 				4FF5AE1B23C6926600B98A20 /* Info.plist */,
 			);
 			path = "sneeks-admin";
@@ -102,9 +179,19 @@
 		4FF5AE1F23C692F800B98A20 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4FC8558C23CBB3270084A344 /* Utils */,
 				4FF5ADFC23C685D300B98A20 /* Assets.xcassets */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		D27999FD08330D28C78618AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2B699857E629CFC123DD0F5 /* Pods_sneeks_admin.framework */,
+				F479A540EF6FE73FD1094AFA /* Pods_sneeks_app.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FF5AE0423C685D300B98A20 /* Build configuration list for PBXNativeTarget "sneeks-app" */;
 			buildPhases = (
+				361821E083D609FE1B806BA8 /* [CP] Check Pods Manifest.lock */,
 				4FF5ADEC23C685CF00B98A20 /* Sources */,
 				4FF5ADED23C685CF00B98A20 /* Frameworks */,
 				4FF5ADEE23C685CF00B98A20 /* Resources */,
+				593F18C11C418DE0C375480E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FF5AE1C23C6926600B98A20 /* Build configuration list for PBXNativeTarget "sneeks-admin" */;
 			buildPhases = (
+				A323E68672AE953AE6F8AA47 /* [CP] Check Pods Manifest.lock */,
 				4FF5AE0723C6926300B98A20 /* Sources */,
 				4FF5AE0823C6926300B98A20 /* Frameworks */,
 				4FF5AE0923C6926300B98A20 /* Resources */,
+				5EB4B1381557B672A898796A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +279,7 @@
 			files = (
 				4FF5AE0023C685D300B98A20 /* LaunchScreen.storyboard in Resources */,
 				4FF5ADFD23C685D300B98A20 /* Assets.xcassets in Resources */,
+				4FC8558123CB86570084A344 /* GoogleService-Info.plist in Resources */,
 				4FF5ADFB23C685CF00B98A20 /* Main.storyboard in Resources */,
 				4FF5AE2223C6A7C100B98A20 /* LoginStoryboard.storyboard in Resources */,
 			);
@@ -198,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF5AE1A23C6926600B98A20 /* LaunchScreen.storyboard in Resources */,
+				4FC8558323CB900D0084A344 /* GoogleService-Info.plist in Resources */,
 				4FF5AE2023C6938900B98A20 /* Assets.xcassets in Resources */,
 				4FF5AE1523C6926300B98A20 /* Main.storyboard in Resources */,
 			);
@@ -205,13 +298,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		361821E083D609FE1B806BA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sneeks-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		593F18C11C418DE0C375480E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sneeks-app/Pods-sneeks-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sneeks-app/Pods-sneeks-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sneeks-app/Pods-sneeks-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EB4B1381557B672A898796A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sneeks-admin/Pods-sneeks-admin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sneeks-admin/Pods-sneeks-admin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sneeks-admin/Pods-sneeks-admin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A323E68672AE953AE6F8AA47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sneeks-admin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4FF5ADEC23C685CF00B98A20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4FF5ADF823C685CF00B98A20 /* ViewController.swift in Sources */,
+				4FC8558B23CB9F400084A344 /* RegisterVC.swift in Sources */,
+				4FC8558E23CBB37E0084A344 /* Extentions.swift in Sources */,
 				4FF5ADF423C685CF00B98A20 /* AppDelegate.swift in Sources */,
+				4FC8558923CB9F250084A344 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +555,7 @@
 		};
 		4FF5AE0523C685D300B98A20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E70B392EE536AA95BD579E3 /* Pods-sneeks-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -397,6 +575,7 @@
 		};
 		4FF5AE0623C685D300B98A20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F73457E35967EF635A5006C0 /* Pods-sneeks-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -416,6 +595,7 @@
 		};
 		4FF5AE1D23C6926600B98A20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34B16B0EBF0771CC032A2687 /* Pods-sneeks-admin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -434,6 +614,7 @@
 		};
 		4FF5AE1E23C6926600B98A20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3938D0C3845F85A4E2B488E3 /* Pods-sneeks-admin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

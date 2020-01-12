@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JHs-SA-A73">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="773.91304347826087" y="113.83928571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--RegisterVC-->
         <scene sceneID="AgJ-pb-hPK">
             <objects>
-                <viewController id="C1C-a9-9MM" sceneMemberID="viewController">
+                <viewController id="C1C-a9-9MM" customClass="RegisterVC" customModule="sneeks_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pSf-jb-5wb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,21 +176,24 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerClicked:" destination="C1C-a9-9MM" eventType="touchUpInside" id="8uG-5Q-9xc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lfC-JY-5zZ">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lfC-JY-5zZ">
                                 <rect key="frame" x="188.5" y="431" width="37" height="37"/>
                                 <color key="color" red="0.27058823529999998" green="0.27058823529999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_check" translatesAutoresizingMaskIntoConstraints="NO" id="3Nt-eO-4Y3">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_check" translatesAutoresizingMaskIntoConstraints="NO" id="3Nt-eO-4Y3">
                                 <rect key="frame" x="366" y="271.5" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="eDS-gy-BcZ"/>
                                     <constraint firstAttribute="width" constant="22" id="eOu-DW-QhC"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_check" translatesAutoresizingMaskIntoConstraints="NO" id="Sex-fm-cEM">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_check" translatesAutoresizingMaskIntoConstraints="NO" id="Sex-fm-cEM">
                                 <rect key="frame" x="366" y="328.5" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="22" id="3q0-8W-sqg"/>
@@ -217,6 +220,15 @@
                         <viewLayoutGuide key="safeArea" id="hub-Bq-2xj"/>
                     </view>
                     <navigationItem key="navigationItem" id="9Pe-FT-6DD"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="lfC-JY-5zZ" id="jq3-pk-Xos"/>
+                        <outlet property="confirmPassCheckImg" destination="Sex-fm-cEM" id="MP2-oa-ORl"/>
+                        <outlet property="confirmPasswordTxt" destination="VDK-ow-LVC" id="SbF-WW-KQI"/>
+                        <outlet property="emailTxt" destination="nZ3-jm-mca" id="GbX-cd-pQP"/>
+                        <outlet property="passCheckImg" destination="3Nt-eO-4Y3" id="Puv-QV-m5g"/>
+                        <outlet property="passwordTxt" destination="hsb-9W-WZz" id="9HU-G2-BRm"/>
+                        <outlet property="usernameTxt" destination="rpB-Xr-Gwr" id="Rpr-nF-ge3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZF-Oo-Ywi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -225,7 +237,7 @@
         <!--Navigation Controller-->
         <scene sceneID="L30-hw-YfP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JHs-SA-A73" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginVC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="JHs-SA-A73" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ih2-EY-Fz3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
