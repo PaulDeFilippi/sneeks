@@ -11,7 +11,7 @@ import Firebase
 
 class RegisterVC: UIViewController {
 
-    // Outlets
+// MARK:- Outlets
     
     @IBOutlet weak var usernameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
@@ -21,6 +21,7 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var passCheckImg: UIImageView!
     @IBOutlet weak var confirmPassCheckImg: UIImageView!
     
+    // MARK:- Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class RegisterVC: UIViewController {
         passwordTxt.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
         confirmPasswordTxt.addTarget(self, action: #selector(textFieldDidChange), for: UIControl.Event.editingChanged)
     }
+    
+    // MARK:- Actions
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         
@@ -45,11 +48,11 @@ class RegisterVC: UIViewController {
         }
         
         if passwordTxt.text == confirmPasswordTxt.text {
-            passCheckImg.image = UIImage(named: "green_check")
-            confirmPassCheckImg.image = UIImage(named: "green_check")
+            passCheckImg.image = UIImage(named: AppImages.GreenCheck)
+            confirmPassCheckImg.image = UIImage(named: AppImages.GreenCheck)
         } else {
-            passCheckImg.image = UIImage(named: "red_check")
-            confirmPassCheckImg.image = UIImage(named: "red_check")
+            passCheckImg.image = UIImage(named: AppImages.RedCheck)
+            confirmPassCheckImg.image = UIImage(named: AppImages.RedCheck)
         }
         
     }
@@ -73,8 +76,6 @@ class RegisterVC: UIViewController {
             print("successfully registered new user.")
             
         }
-        
     }
-    
 
 }
