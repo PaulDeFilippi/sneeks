@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="RJa-xS-osT">
             <objects>
-                <viewController id="jiz-vJ-xD5" sceneMemberID="viewController">
+                <viewController id="jiz-vJ-xD5" customClass="LoginVC" customModule="sneeks_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="023-2d-GjU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
                                             <constraint firstAttribute="height" constant="45" id="GXV-bL-EJg"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyK-Oc-IJ3">
                                         <rect key="frame" x="0.0" y="152" width="374" height="33"/>
@@ -50,6 +50,9 @@
                                         <state key="normal" title="Forgot password?">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPassClicked:" destination="jiz-vJ-xD5" eventType="touchUpInside" id="Q5Q-F8-YBd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wX-xh-R2E" customClass="RoundedButton" customModule="sneeks_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="197" width="374" height="45"/>
@@ -61,6 +64,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" red="0.95294117647058818" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginClicked:" destination="jiz-vJ-xD5" eventType="touchUpInside" id="NMT-fb-PyG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNM-cM-Go6" customClass="RoundedButton" customModule="sneeks_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="254" width="374" height="45"/>
@@ -86,6 +92,9 @@
                                         <state key="normal" title="Continue as guest">
                                             <color key="titleColor" red="0.95294117649999999" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="guestClicked:" destination="jiz-vJ-xD5" eventType="touchUpInside" id="aHz-3j-IJs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -109,6 +118,11 @@
                         <viewLayoutGuide key="safeArea" id="xgw-3U-vJE"/>
                     </view>
                     <navigationItem key="navigationItem" id="q7R-BJ-pB5"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="SPt-y8-hOM" id="jFf-Lv-j4O"/>
+                        <outlet property="emailTxt" destination="ZGM-D0-Mxt" id="z8P-oT-yHd"/>
+                        <outlet property="passTxt" destination="QKb-Wx-28i" id="qdO-wu-deX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kwg-Ql-dbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
