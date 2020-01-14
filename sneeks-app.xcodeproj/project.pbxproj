@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F56210023CE6B28005BFAE9 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5620FE23CE6B28005BFAE9 /* ForgotPasswordVC.swift */; };
+		4F56210123CE6B28005BFAE9 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5620FF23CE6B28005BFAE9 /* ForgotPasswordVC.xib */; };
 		4FC8558123CB86570084A344 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8558023CB86570084A344 /* GoogleService-Info.plist */; };
 		4FC8558323CB900D0084A344 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8558223CB900D0084A344 /* GoogleService-Info.plist */; };
 		4FC8558923CB9F250084A344 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8558823CB9F250084A344 /* LoginVC.swift */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		34B16B0EBF0771CC032A2687 /* Pods-sneeks-admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sneeks-admin.debug.xcconfig"; path = "Target Support Files/Pods-sneeks-admin/Pods-sneeks-admin.debug.xcconfig"; sourceTree = "<group>"; };
 		3938D0C3845F85A4E2B488E3 /* Pods-sneeks-admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sneeks-admin.release.xcconfig"; path = "Target Support Files/Pods-sneeks-admin/Pods-sneeks-admin.release.xcconfig"; sourceTree = "<group>"; };
+		4F5620FE23CE6B28005BFAE9 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		4F5620FF23CE6B28005BFAE9 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		4FC8558023CB86570084A344 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FC8558223CB900D0084A344 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FC8558823CB9F250084A344 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -88,6 +92,15 @@
 				F73457E35967EF635A5006C0 /* Pods-sneeks-app.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4F5620FD23CE6B01005BFAE9 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				4F5620FE23CE6B28005BFAE9 /* ForgotPasswordVC.swift */,
+				4F5620FF23CE6B28005BFAE9 /* ForgotPasswordVC.xib */,
+			);
+			path = XIBs;
 			sourceTree = "<group>";
 		};
 		4FC8558423CB9E6C0084A344 /* Controller */ = {
@@ -158,6 +171,7 @@
 		4FF5ADF223C685CF00B98A20 /* sneeks-app */ = {
 			isa = PBXGroup;
 			children = (
+				4F5620FD23CE6B01005BFAE9 /* XIBs */,
 				4FC8558623CB9E890084A344 /* Model */,
 				4FC8558523CB9E7F0084A344 /* View */,
 				4FC8558423CB9E6C0084A344 /* Controller */,
@@ -295,6 +309,7 @@
 				4FF5ADFD23C685D300B98A20 /* Assets.xcassets in Resources */,
 				4FC8558123CB86570084A344 /* GoogleService-Info.plist in Resources */,
 				4FF5ADFB23C685CF00B98A20 /* Main.storyboard in Resources */,
+				4F56210123CE6B28005BFAE9 /* ForgotPasswordVC.xib in Resources */,
 				4FF5AE2223C6A7C100B98A20 /* LoginStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +419,7 @@
 				4FF5ADF423C685CF00B98A20 /* AppDelegate.swift in Sources */,
 				4FFE3CE623CCF48E00BDE35A /* RoundedViews.swift in Sources */,
 				4FC8558923CB9F250084A344 /* LoginVC.swift in Sources */,
+				4F56210023CE6B28005BFAE9 /* ForgotPasswordVC.swift in Sources */,
 				4FFE3CE323CBF02600BDE35A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

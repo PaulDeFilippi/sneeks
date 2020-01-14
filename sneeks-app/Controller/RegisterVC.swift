@@ -11,7 +11,7 @@ import Firebase
 
 class RegisterVC: UIViewController {
 
-// MARK:- Outlets
+    // MARK:- Outlets
     
     @IBOutlet weak var usernameTxt: UITextField!
     @IBOutlet weak var emailTxt: UITextField!
