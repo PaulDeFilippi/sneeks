@@ -11,14 +11,20 @@ import Firebase
 
 class LoginVC: UIViewController {
     
+    // MARK:- Outlets
+    
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passTxt: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    // MARK:- Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    // MARK:- Actions
     
     @IBAction func forgotPassClicked(_ sender: Any) {
         let vc = ForgotPasswordVC()
@@ -41,7 +47,7 @@ class LoginVC: UIViewController {
 
             if let error = error {
                 debugPrint(error.localizedDescription)
-                self.handleFireAuthError(error: error)
+                Auth.auth().handleFireAuthError(error: error, vc: self)
                 self.activityIndicator.stopAnimating()
                 return
             }

@@ -27,6 +27,4 @@ struct AppColors {
     static let LightBlue = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
     static let Purple = #colorLiteral(red: 0.2705882353, green: 0.2705882353, blue: 1, alpha: 1)
     static let Violet = #colorLiteral(red: 0.6866183281, green: 0.2397463322, blue: 1, alpha: 1)
-    
-    
 }

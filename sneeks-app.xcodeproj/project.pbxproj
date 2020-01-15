@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4F56210023CE6B28005BFAE9 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5620FE23CE6B28005BFAE9 /* ForgotPasswordVC.swift */; };
 		4F56210123CE6B28005BFAE9 /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5620FF23CE6B28005BFAE9 /* ForgotPasswordVC.xib */; };
+		4FA8698023CE8DE1009D3C62 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA8697F23CE8DE1009D3C62 /* Firebase+Utils.swift */; };
+		4FA8698123CE8F77009D3C62 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA8697F23CE8DE1009D3C62 /* Firebase+Utils.swift */; };
 		4FC8558123CB86570084A344 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8558023CB86570084A344 /* GoogleService-Info.plist */; };
 		4FC8558323CB900D0084A344 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FC8558223CB900D0084A344 /* GoogleService-Info.plist */; };
 		4FC8558923CB9F250084A344 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8558823CB9F250084A344 /* LoginVC.swift */; };
@@ -36,6 +38,7 @@
 		3938D0C3845F85A4E2B488E3 /* Pods-sneeks-admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sneeks-admin.release.xcconfig"; path = "Target Support Files/Pods-sneeks-admin/Pods-sneeks-admin.release.xcconfig"; sourceTree = "<group>"; };
 		4F5620FE23CE6B28005BFAE9 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		4F5620FF23CE6B28005BFAE9 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		4FA8697F23CE8DE1009D3C62 /* Firebase+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+Utils.swift"; sourceTree = "<group>"; };
 		4FC8558023CB86570084A344 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FC8558223CB900D0084A344 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FC8558823CB9F250084A344 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 			children = (
 				4FC8558D23CBB37E0084A344 /* Extentions.swift */,
 				4FFE3CE223CBF02600BDE35A /* Constants.swift */,
+				4FA8697F23CE8DE1009D3C62 /* Firebase+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -413,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA8698023CE8DE1009D3C62 /* Firebase+Utils.swift in Sources */,
 				4FF5ADF823C685CF00B98A20 /* HomeVC.swift in Sources */,
 				4FC8558B23CB9F400084A344 /* RegisterVC.swift in Sources */,
 				4FC8558E23CBB37E0084A344 /* Extentions.swift in Sources */,
@@ -428,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA8698123CE8F77009D3C62 /* Firebase+Utils.swift in Sources */,
 				4FF5AE1223C6926300B98A20 /* ViewController.swift in Sources */,
 				4FF5AE0E23C6926300B98A20 /* AppDelegate.swift in Sources */,
 			);
@@ -593,7 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 963UXK3MCT;
 				INFOPLIST_FILE = "sneeks-app/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -613,7 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 963UXK3MCT;
 				INFOPLIST_FILE = "sneeks-app/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -633,6 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 963UXK3MCT;
 				INFOPLIST_FILE = "sneeks-admin/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -652,6 +659,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 963UXK3MCT;
 				INFOPLIST_FILE = "sneeks-admin/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
