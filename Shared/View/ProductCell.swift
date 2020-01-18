@@ -28,7 +28,7 @@ class ProductCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    fileprivate func configureCell(product: Product) {
+    func configureCell(product: Product) {
         productTitle.text = product.name
         
         if let url = URL(string: product.imageUrl) {

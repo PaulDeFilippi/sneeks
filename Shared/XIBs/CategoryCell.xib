@@ -23,7 +23,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HMf-Eg-ZdD">
                         <rect key="frame" x="8" y="169.5" width="134" height="22.5"/>
                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -46,6 +46,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="jordan_1_OG" width="344" height="308"/>
+        <image name="jordan_1_OG" width="338" height="298"/>
     </resources>
 </document>
