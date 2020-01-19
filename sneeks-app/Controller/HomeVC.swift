@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class HomeVC: UIViewController {
     
@@ -21,6 +22,7 @@ class HomeVC: UIViewController {
     
     var categories = [Category]()
     var selectedCategory: Category!
+    var db: Firestore!
     
     
     // MARK:- Lifecycle
@@ -28,6 +30,8 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        db = Firestore.firestore()
+
         let category = Category.init(name: "Jordans", id: "12344", imgUrl: "https://images.unsplash.com/photo-1560906992-4b00de401b90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80", isActive: true, timeStamp: Timestamp())
         categories.append(category)
         
@@ -43,6 +47,24 @@ class HomeVC: UIViewController {
                     return
                 }
             }
+        }
+        fetchDocument()
+    }
+    
+    func fetchDocument() {
+        let docRef = db.collection("categories").document("SCL292LvBlpqIvY0EYyb")
+        
+        docRef.getDocument { (snap, error) in
+            guard let data = snap?.data() else { return }
+            let name = data["name"] as? String ?? ""
+            let id = data["id"] as? String ?? ""
+            let imgUrl = data["imgUrl"] as? String ?? ""
+            let isActive = data["isActive"] as? Bool ?? true
+            let timeStamp = data["timeStamp"] as? Timestamp ?? Timestamp()
+            
+            let newCategory = Category.init(name: name, id: id, imgUrl: imgUrl, isActive: isActive, timeStamp: timeStamp)
+            self.categories.append(newCategory)
+            self.collectionView.reloadData()
         }
     }
     
