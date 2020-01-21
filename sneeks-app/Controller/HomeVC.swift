@@ -23,6 +23,7 @@ class HomeVC: UIViewController {
     var categories = [Category]()
     var selectedCategory: Category!
     var db: Firestore!
+    var listener: ListenerRegistration!
     
     
     // MARK:- Lifecycle
@@ -31,9 +32,9 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         
         db = Firestore.firestore()
-
-        let category = Category.init(name: "Jordans", id: "12344", imgUrl: "https://images.unsplash.com/photo-1560906992-4b00de401b90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80", isActive: true, timeStamp: Timestamp())
-        categories.append(category)
+        // dummy data
+//        let category = Category.init(name: "Jordans", id: "12344", imgUrl: "https://images.unsplash.com/photo-1560906992-4b00de401b90?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80", isActive: true, timeStamp: Timestamp())
+//        categories.append(category)
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -48,27 +49,60 @@ class HomeVC: UIViewController {
                 }
             }
         }
-        fetchDocument()
+
     }
     
     func fetchDocument() {
         let docRef = db.collection("categories").document("SCL292LvBlpqIvY0EYyb")
         
-        docRef.getDocument { (snap, error) in
+        // with snapshot listener for data change to document
+        listener = docRef.addSnapshotListener { (snap, error) in
+            self.categories.removeAll()
             guard let data = snap?.data() else { return }
-            let name = data["name"] as? String ?? ""
-            let id = data["id"] as? String ?? ""
-            let imgUrl = data["imgUrl"] as? String ?? ""
-            let isActive = data["isActive"] as? Bool ?? true
-            let timeStamp = data["timeStamp"] as? Timestamp ?? Timestamp()
-            
-            let newCategory = Category.init(name: name, id: id, imgUrl: imgUrl, isActive: isActive, timeStamp: timeStamp)
+            let newCategory = Category.init(data: data)
             self.categories.append(newCategory)
             self.collectionView.reloadData()
         }
+        
+//        docRef.getDocument { (snap, error) in
+//            guard let data = snap?.data() else { return }
+//            let newCategory = Category.init(data: data)
+//            self.categories.append(newCategory)
+//            self.collectionView.reloadData()
+//        }
+    }
+    
+    func fetchCollection() {
+        let collectionReference = db.collection("categories")
+        
+        // with snapshot listener added to listen for data changes to entire collection
+        listener = collectionReference.addSnapshotListener { (snap, error) in
+            self.categories.removeAll()
+            guard let documents = snap?.documents else { return }
+            for document in documents {
+                let data = document.data()
+                let newCategory = Category.init(data: data)
+                self.categories.append(newCategory)
+            }
+            self.collectionView.reloadData()
+        }
+        
+//        collectionReference.getDocuments { (snap, error) in
+//            guard let documents = snap?.documents else { return }
+//            for document in documents {
+//                let data = document.data()
+//                let newCategory = Category.init(data: data)
+//                self.categories.append(newCategory)
+//            }
+//            self.collectionView.reloadData()
+//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        //fetchDocument()
+        fetchCollection()
+        
         if let user = Auth.auth().currentUser, !user.isAnonymous {
             // We are logged in
             loginOutBtn.title = "Logout"
@@ -76,6 +110,10 @@ class HomeVC: UIViewController {
         } else {
             loginOutBtn.title = "Login"
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        listener.remove()
     }
     
     // MARK:- Actions
