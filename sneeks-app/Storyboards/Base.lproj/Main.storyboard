@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HomeVC-->
+        <!--SNEEKS-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="sneeks_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,12 +50,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="D2V-nm-ZGD">
+                    <navigationItem key="navigationItem" title="SNEEKS" id="D2V-nm-ZGD">
                         <barButtonItem key="leftBarButtonItem" title="Login" id="Zcs-Gg-jJZ">
                             <connections>
                                 <action selector="loginOutClicked:" destination="BYZ-38-t0r" id="Gnj-TF-4jw"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="bar_button_cart" id="9F3-ZJ-0Tf"/>
+                            <barButtonItem image="bar_button_star" id="LRE-IS-KyD"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="Qek-bu-sNV" id="yPO-SY-9IC"/>
@@ -114,6 +118,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PfC-O4-t8x">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.27058823529999998" green="0.27058823529999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -126,6 +132,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bar_button_cart" width="27" height="24"/>
+        <image name="bar_button_star" width="26" height="26"/>
         <image name="bg_cat_0" width="3202" height="4803"/>
     </resources>
 </document>
