@@ -20,7 +20,7 @@ class AdminHomeVC: HomeVC {
     }
     
     @objc func addCategory() {
-        // seg to add cat view
+        performSegue(withIdentifier: Segues.ToAddEditCategory, sender: self)
     }
 
 

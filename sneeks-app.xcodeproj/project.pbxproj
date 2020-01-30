@@ -34,6 +34,7 @@
 		4FDB1C5C23E24E0500EC9DE6 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8558D23CBB37E0084A344 /* Extentions.swift */; };
 		4FDB1C5E23E24E5900EC9DE6 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB1C5523DFB95C00EC9DE6 /* ProductDetailVC.swift */; };
 		4FDB1C5F23E24E5900EC9DE6 /* ProductDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDB1C5623DFB95C00EC9DE6 /* ProductDetailVC.xib */; };
+		4FDB1C6123E252A600EC9DE6 /* AddEditCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDB1C6023E252A600EC9DE6 /* AddEditCategoryVC.swift */; };
 		4FE0FB6323D2754500644172 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0FB6123D2754500644172 /* ProductCell.swift */; };
 		4FE0FB6423D2754500644172 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0FB6123D2754500644172 /* ProductCell.swift */; };
 		4FE0FB6523D2754500644172 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0FB6223D2754500644172 /* ProductCell.xib */; };
@@ -73,6 +74,7 @@
 		4FC8558D23CBB37E0084A344 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		4FDB1C5523DFB95C00EC9DE6 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
 		4FDB1C5623DFB95C00EC9DE6 /* ProductDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailVC.xib; sourceTree = "<group>"; };
+		4FDB1C6023E252A600EC9DE6 /* AddEditCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCategoryVC.swift; sourceTree = "<group>"; };
 		4FE0FB6123D2754500644172 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		4FE0FB6223D2754500644172 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		4FF5ADF023C685CF00B98A20 /* sneeks-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sneeks-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +198,16 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		4FDB1C6223E252DF00EC9DE6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4FDB1C6023E252A600EC9DE6 /* AddEditCategoryVC.swift */,
+				4FF5AE1123C6926300B98A20 /* AdminHomeVC.swift */,
+				4FF5AE0D23C6926300B98A20 /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		4FF5ADE723C685CF00B98A20 = {
 			isa = PBXGroup;
 			children = (
@@ -233,8 +245,7 @@
 		4FF5AE0C23C6926300B98A20 /* sneeks-admin */ = {
 			isa = PBXGroup;
 			children = (
-				4FF5AE0D23C6926300B98A20 /* AppDelegate.swift */,
-				4FF5AE1123C6926300B98A20 /* AdminHomeVC.swift */,
+				4FDB1C6223E252DF00EC9DE6 /* Controller */,
 				4FF5AE1323C6926300B98A20 /* Main.storyboard */,
 				4FF5AE1823C6926600B98A20 /* LaunchScreen.storyboard */,
 				4FC8558223CB900D0084A344 /* GoogleService-Info.plist */,
@@ -501,6 +512,7 @@
 				4FDB1C5923E249BF00EC9DE6 /* HomeVC.swift in Sources */,
 				4FF5AE0E23C6926300B98A20 /* AppDelegate.swift in Sources */,
 				4FA8698423CF9920009D3C62 /* Category.swift in Sources */,
+				4FDB1C6123E252A600EC9DE6 /* AddEditCategoryVC.swift in Sources */,
 				4FDB1C5C23E24E0500EC9DE6 /* Extentions.swift in Sources */,
 				4FE0FB6423D2754500644172 /* ProductCell.swift in Sources */,
 				4FA8698823CF9DA3009D3C62 /* CategoryCell.swift in Sources */,
