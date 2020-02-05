@@ -90,6 +90,7 @@
                         <outlet property="collectionView" destination="fho-lb-3HK" id="LXS-KR-tuv"/>
                         <outlet property="loginOutBtn" destination="PsR-VR-gHU" id="MgL-CO-2Ul"/>
                         <segue destination="GVI-WK-cPD" kind="show" identifier="ToAddEditCategory" id="9FJ-QE-596"/>
+                        <segue destination="Z5Z-yv-Kyw" kind="show" identifier="toProductsVC" id="ZWl-zh-2Lo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8rX-RH-AeU" sceneMemberID="firstResponder"/>
@@ -171,6 +172,7 @@
                     <navigationItem key="navigationItem" id="5FY-gO-Ce8"/>
                     <connections>
                         <outlet property="activityIndicator" destination="mI3-4i-hY5" id="06J-ST-3yo"/>
+                        <outlet property="addButton" destination="uAW-gE-qz9" id="YX8-KM-pvf"/>
                         <outlet property="categoryImage" destination="J9U-5e-xfN" id="gV6-bf-Qhw"/>
                         <outlet property="categoryNameTextField" destination="dsm-EM-mxx" id="z20-rZ-Lh1"/>
                     </connections>
@@ -179,9 +181,68 @@
             </objects>
             <point key="canvasLocation" x="1840.5797101449277" y="132.58928571428572"/>
         </scene>
+        <!--Admin ProductsVC-->
+        <scene sceneID="WLG-4c-Gz8">
+            <objects>
+                <viewController id="Z5Z-yv-Kyw" customClass="AdminProductsVC" customModule="sneeks_admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6EW-Wa-A7k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_cat_0" translatesAutoresizingMaskIntoConstraints="NO" id="dpu-0I-ybp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4sn-gF-i3N">
+                                <rect key="frame" x="2" y="88" width="410" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="4sn-gF-i3N" secondAttribute="bottom" id="G6B-In-0Q2"/>
+                            <constraint firstAttribute="bottom" secondItem="dpu-0I-ybp" secondAttribute="bottom" id="KN5-P6-XDj"/>
+                            <constraint firstItem="dpu-0I-ybp" firstAttribute="top" secondItem="SOq-Vy-q7E" secondAttribute="top" id="LWF-RV-qu8"/>
+                            <constraint firstItem="dpu-0I-ybp" firstAttribute="trailing" secondItem="SOq-Vy-q7E" secondAttribute="trailing" id="c5y-fQ-3S8"/>
+                            <constraint firstItem="4sn-gF-i3N" firstAttribute="leading" secondItem="SOq-Vy-q7E" secondAttribute="leading" constant="2" id="fC6-Yu-QhA"/>
+                            <constraint firstItem="SOq-Vy-q7E" firstAttribute="trailing" secondItem="4sn-gF-i3N" secondAttribute="trailing" constant="2" id="m11-Lw-d1C"/>
+                            <constraint firstItem="4sn-gF-i3N" firstAttribute="top" secondItem="SOq-Vy-q7E" secondAttribute="top" id="sIF-8O-q0l"/>
+                            <constraint firstItem="dpu-0I-ybp" firstAttribute="leading" secondItem="SOq-Vy-q7E" secondAttribute="leading" id="x5e-WX-iB9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SOq-Vy-q7E"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="n7I-Yu-NrG"/>
+                    <connections>
+                        <outlet property="tableView" destination="4sn-gF-i3N" id="dIB-rh-aE4"/>
+                        <segue destination="BNf-A4-V1J" kind="show" identifier="ToAddEditProduct" id="iJn-uC-krA"/>
+                        <segue destination="GVI-WK-cPD" kind="show" identifier="ToEditCategory" id="du2-Kg-8bl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HCG-80-qkO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032" y="879"/>
+        </scene>
+        <!--Add Edit ProductsVC-->
+        <scene sceneID="N3m-pr-Kmx">
+            <objects>
+                <viewController id="BNf-A4-V1J" customClass="AddEditProductsVC" customModule="sneeks_admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uDr-fx-qLD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Zh-Tk-x8X"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yjm-hG-MxN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NW3-UC-Mmx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881" y="882"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg_cat_0" width="3202" height="4803"/>
         <image name="camera" width="66" height="54"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="du2-Kg-8bl"/>
+    </inferredMetricsTieBreakers>
 </document>

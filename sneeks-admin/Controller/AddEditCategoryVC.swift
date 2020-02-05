@@ -17,6 +17,9 @@ class AddEditCategoryVC: UIViewController {
     @IBOutlet weak var categoryNameTextField: UITextField!
     @IBOutlet weak var categoryImage: RoundedImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var addButton: UIButton!
+    
+    var categoryToEdit: Category?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,17 @@ class AddEditCategoryVC: UIViewController {
         tap.numberOfTapsRequired = 1
         categoryImage.isUserInteractionEnabled = true
         categoryImage.addGestureRecognizer(tap)
+        
+        // If we are editing, categoryToEdit != nil
+        if let category = categoryToEdit {
+            categoryNameTextField.text = category.name
+            addButton.setTitle("Save Changes", for: .normal)
+            
+            if let url = URL(string: category.imgUrl) {
+                categoryImage.contentMode = .scaleAspectFill
+                categoryImage.kf.setImage(with: url)
+            }
+        }
     }
 
     @objc func imgTapped(imgTapped: UITapGestureRecognizer) {
@@ -79,14 +93,20 @@ class AddEditCategoryVC: UIViewController {
                                      imgUrl: url,
                                      timeStamp: Timestamp())
         
-        docRef = Firestore.firestore().collection("categories").document()
-        category.id = docRef.documentID
+        if let categoryToEdit = categoryToEdit {
+            // We are editing
+            docRef = Firestore.firestore().collection("categories").document(categoryToEdit.id)
+            category.id = categoryToEdit.id
+        } else {
+            // Creating new category
+            docRef = Firestore.firestore().collection("categories").document()
+            category.id = docRef.documentID
+        }
         
         let data = Category.modelToData(category: category)
         docRef.setData(data, merge: true) { (error) in
             if let error = error {
                 self.handleError(error: error, msg: "Unable to upload new category to Firestore.")
-                
                 return
             }
             
@@ -98,9 +118,7 @@ class AddEditCategoryVC: UIViewController {
         debugPrint(error.localizedDescription)
         self.simpleAlert(title: "Error", msg: msg)
         self.activityIndicator.stopAnimating()
-        
     }
- 
 }
 
 extension AddEditCategoryVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

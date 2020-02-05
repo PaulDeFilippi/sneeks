@@ -50,6 +50,8 @@
 		4FF5AE1A23C6926600B98A20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5AE1823C6926600B98A20 /* LaunchScreen.storyboard */; };
 		4FF5AE2023C6938900B98A20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5ADFC23C685D300B98A20 /* Assets.xcassets */; };
 		4FF5AE2223C6A7C100B98A20 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5AE2123C6A7C100B98A20 /* LoginStoryboard.storyboard */; };
+		4FF7A3DE23E62234009564CD /* AdminProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF7A3DD23E62234009564CD /* AdminProductsVC.swift */; };
+		4FF7A3E023E747F2009564CD /* AddEditProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF7A3DF23E747F2009564CD /* AddEditProductsVC.swift */; };
 		4FFE3CE323CBF02600BDE35A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE3CE223CBF02600BDE35A /* Constants.swift */; };
 		4FFE3CE623CCF48E00BDE35A /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFE3CE523CCF48E00BDE35A /* RoundedViews.swift */; };
 		71F110A653736DE671DBD80C /* Pods_sneeks_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F479A540EF6FE73FD1094AFA /* Pods_sneeks_app.framework */; };
@@ -91,6 +93,8 @@
 		4FF5AE1923C6926600B98A20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FF5AE1B23C6926600B98A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FF5AE2123C6A7C100B98A20 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		4FF7A3DD23E62234009564CD /* AdminProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductsVC.swift; sourceTree = "<group>"; };
+		4FF7A3DF23E747F2009564CD /* AddEditProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditProductsVC.swift; sourceTree = "<group>"; };
 		4FFE3CE223CBF02600BDE35A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4FFE3CE523CCF48E00BDE35A /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
 		8E70B392EE536AA95BD579E3 /* Pods-sneeks-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sneeks-app.debug.xcconfig"; path = "Target Support Files/Pods-sneeks-app/Pods-sneeks-app.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,8 +205,10 @@
 		4FDB1C6223E252DF00EC9DE6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4FDB1C6023E252A600EC9DE6 /* AddEditCategoryVC.swift */,
 				4FF5AE1123C6926300B98A20 /* AdminHomeVC.swift */,
+				4FF7A3DD23E62234009564CD /* AdminProductsVC.swift */,
+				4FF7A3DF23E747F2009564CD /* AddEditProductsVC.swift */,
+				4FDB1C6023E252A600EC9DE6 /* AddEditCategoryVC.swift */,
 				4FF5AE0D23C6926300B98A20 /* AppDelegate.swift */,
 			);
 			path = Controller;
@@ -511,12 +517,14 @@
 				4FA8698E23CFDBA8009D3C62 /* ProductsVC.swift in Sources */,
 				4FDB1C5923E249BF00EC9DE6 /* HomeVC.swift in Sources */,
 				4FF5AE0E23C6926300B98A20 /* AppDelegate.swift in Sources */,
+				4FF7A3DE23E62234009564CD /* AdminProductsVC.swift in Sources */,
 				4FA8698423CF9920009D3C62 /* Category.swift in Sources */,
 				4FDB1C6123E252A600EC9DE6 /* AddEditCategoryVC.swift in Sources */,
 				4FDB1C5C23E24E0500EC9DE6 /* Extentions.swift in Sources */,
 				4FE0FB6423D2754500644172 /* ProductCell.swift in Sources */,
 				4FA8698823CF9DA3009D3C62 /* CategoryCell.swift in Sources */,
 				4FDB1C5E23E24E5900EC9DE6 /* ProductDetailVC.swift in Sources */,
+				4FF7A3E023E747F2009564CD /* AddEditProductsVC.swift in Sources */,
 				4FA8699123CFDC53009D3C62 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
