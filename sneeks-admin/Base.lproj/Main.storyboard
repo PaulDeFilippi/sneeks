@@ -228,10 +228,101 @@
                     <view key="view" contentMode="scaleToFill" id="uDr-fx-qLD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m6N-na-air">
+                                <rect key="frame" x="20" y="108" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Product Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="blg-fD-7SJ">
+                                <rect key="frame" x="20" y="154" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="o8C-ZM-KSj">
+                                <rect key="frame" x="20" y="246" width="374" height="128"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="47m-Bi-yj4"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter description below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifD-h7-eZN">
+                                <rect key="frame" x="100.5" y="208" width="213.5" height="26"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to add image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpD-LI-adB">
+                                <rect key="frame" x="20" y="394" width="374" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="oQX-7U-mIw" customClass="RoundedImageView" customModule="sneeks_admin" customModuleProvider="target">
+                                <rect key="frame" x="107" y="429.5" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="cAE-Fd-74l"/>
+                                    <constraint firstAttribute="height" constant="200" id="w7r-8c-STv"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waT-RZ-5ba" customClass="RoundedButton" customModule="sneeks_admin" customModuleProvider="target">
+                                <rect key="frame" x="20" y="797" width="374" height="45"/>
+                                <color key="backgroundColor" red="0.63529411759999999" green="0.27058823529999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="iCd-Zr-OTY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="Add Product">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addClicked:" destination="BNf-A4-V1J" eventType="touchUpInside" id="xV6-Q0-slA"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8aB-qB-AcC">
+                                <rect key="frame" x="188.5" y="649.5" width="37" height="37"/>
+                                <color key="color" red="0.27058823529999998" green="0.27058823529999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="blg-fD-7SJ" firstAttribute="leading" secondItem="6Zh-Tk-x8X" secondAttribute="leading" constant="20" id="10A-Bq-7Mt"/>
+                            <constraint firstItem="6Zh-Tk-x8X" firstAttribute="trailing" secondItem="o8C-ZM-KSj" secondAttribute="trailing" constant="20" id="6uj-Or-pNM"/>
+                            <constraint firstItem="ifD-h7-eZN" firstAttribute="centerX" secondItem="uDr-fx-qLD" secondAttribute="centerX" id="APv-uE-TCo"/>
+                            <constraint firstItem="m6N-na-air" firstAttribute="leading" secondItem="6Zh-Tk-x8X" secondAttribute="leading" constant="20" id="AyS-yf-W33"/>
+                            <constraint firstItem="o8C-ZM-KSj" firstAttribute="leading" secondItem="6Zh-Tk-x8X" secondAttribute="leading" constant="20" id="CbX-Bt-QtJ"/>
+                            <constraint firstItem="6Zh-Tk-x8X" firstAttribute="trailing" secondItem="waT-RZ-5ba" secondAttribute="trailing" constant="20" id="Edu-2P-Tw6"/>
+                            <constraint firstItem="MpD-LI-adB" firstAttribute="top" secondItem="o8C-ZM-KSj" secondAttribute="bottom" constant="20" id="I82-jN-iM5"/>
+                            <constraint firstItem="6Zh-Tk-x8X" firstAttribute="bottom" secondItem="waT-RZ-5ba" secondAttribute="bottom" constant="20" id="PTR-hY-fPQ"/>
+                            <constraint firstItem="6Zh-Tk-x8X" firstAttribute="trailing" secondItem="MpD-LI-adB" secondAttribute="trailing" constant="20" id="RJF-qg-qlu"/>
+                            <constraint firstItem="o8C-ZM-KSj" firstAttribute="top" secondItem="ifD-h7-eZN" secondAttribute="bottom" constant="12" id="Scb-Co-zi8"/>
+                            <constraint firstItem="oQX-7U-mIw" firstAttribute="top" secondItem="MpD-LI-adB" secondAttribute="bottom" constant="12" id="U3e-qT-LQT"/>
+                            <constraint firstItem="8aB-qB-AcC" firstAttribute="top" secondItem="oQX-7U-mIw" secondAttribute="bottom" constant="20" id="XbC-HH-abN"/>
+                            <constraint firstItem="6Zh-Tk-x8X" firstAttribute="trailing" secondItem="blg-fD-7SJ" secondAttribute="trailing" constant="20" id="f7Y-sf-hix"/>
+                            <constraint firstItem="blg-fD-7SJ" firstAttribute="top" secondItem="m6N-na-air" secondAttribute="bottom" constant="12" id="jFe-zF-c5A"/>
+                            <constraint firstItem="8aB-qB-AcC" firstAttribute="centerX" secondItem="uDr-fx-qLD" secondAttribute="centerX" id="ohC-xg-mot"/>
+                            <constraint firstItem="m6N-na-air" firstAttribute="top" secondItem="6Zh-Tk-x8X" secondAttribute="top" constant="20" id="rDJ-Tc-ntY"/>
+                            <constraint firstItem="ifD-h7-eZN" firstAttribute="top" secondItem="blg-fD-7SJ" secondAttribute="bottom" constant="20" id="rUQ-T9-M6l"/>
+                            <constraint firstItem="MpD-LI-adB" firstAttribute="leading" secondItem="6Zh-Tk-x8X" secondAttribute="leading" constant="20" id="uHt-CB-8S9"/>
+                            <constraint firstItem="6Zh-Tk-x8X" firstAttribute="trailing" secondItem="m6N-na-air" secondAttribute="trailing" constant="20" id="uJh-6y-aNa"/>
+                            <constraint firstItem="oQX-7U-mIw" firstAttribute="centerX" secondItem="uDr-fx-qLD" secondAttribute="centerX" id="wHq-Lb-2nS"/>
+                            <constraint firstItem="waT-RZ-5ba" firstAttribute="leading" secondItem="6Zh-Tk-x8X" secondAttribute="leading" constant="20" id="zdm-iY-F00"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Zh-Tk-x8X"/>
                     </view>
                     <navigationItem key="navigationItem" id="yjm-hG-MxN"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="8aB-qB-AcC" id="VBL-Mj-m9s"/>
+                        <outlet property="addBtn" destination="waT-RZ-5ba" id="F7Z-N8-0Sm"/>
+                        <outlet property="productDescText" destination="o8C-ZM-KSj" id="Vha-FB-ZnJ"/>
+                        <outlet property="productImgView" destination="oQX-7U-mIw" id="TGR-qd-BiA"/>
+                        <outlet property="productNameText" destination="m6N-na-air" id="dyh-YV-4lD"/>
+                        <outlet property="productPriceText" destination="blg-fD-7SJ" id="rqx-lV-ycv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NW3-UC-Mmx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

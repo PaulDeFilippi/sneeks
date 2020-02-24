@@ -47,16 +47,18 @@ class AddEditCategoryVC: UIViewController {
     }
     
     @IBAction func addCategoryClicked(_ sender: Any) {
-        activityIndicator.startAnimating()
         uploadImageThenDocument()
         
     }
     
     func uploadImageThenDocument() {
+        
         guard let image = categoryImage.image, let categoryName = categoryNameTextField.text, categoryName.isNotEmpty else {
             simpleAlert(title: "Error", msg: "Must add category image and name")
             return
         }
+        
+        activityIndicator.startAnimating()
         
         guard let imageData = image.jpegData(compressionQuality: 0.2) else { return }
         
