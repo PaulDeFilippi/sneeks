@@ -20,7 +20,7 @@ use_frameworks!
 
 # Pods for sneeks-app
 shared_pods
-pod 'Stripe', '15.0.1'
+pod 'Stripe', '19.0.1'
 end
 
 target 'sneeks-admin' do

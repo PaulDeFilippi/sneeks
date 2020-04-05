@@ -8,10 +8,12 @@
 
 import UIKit
 import FirebaseStorage
+import FirebaseFirestore
 
 class AddEditProductsVC: UIViewController {
     
     // MARK:- Outlets
+    
     @IBOutlet weak var productNameText: UITextField!
     @IBOutlet weak var productPriceText: UITextField!
     @IBOutlet weak var productDescText: UITextView!
@@ -20,9 +22,16 @@ class AddEditProductsVC: UIViewController {
     @IBOutlet weak var addBtn: RoundedButton!
     
     // MARK:- Properties
+    
     var selectedCategory: Category!
     var productToEdit: Product?
+    
+    var name = ""
+    var price = 0.0
+    var productDescription = ""
 
+    // MARK:- Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,8 +39,21 @@ class AddEditProductsVC: UIViewController {
         tap.numberOfTapsRequired = 1
         productImgView.isUserInteractionEnabled = true
         productImgView.addGestureRecognizer(tap)
-
+        
+        if let product = productToEdit {
+            productNameText.text = product.name
+            productDescText.text = product.productDescription
+            productPriceText.text = String(product.price)
+            addBtn.setTitle("Save Changes", for: .normal)
+            
+            if let url = URL(string: product.imageUrl) {
+                productImgView.contentMode = .scaleAspectFill
+                productImgView.kf.setImage(with: url)
+            }
+        }
     }
+    
+    // MARK:- Actions
     
     @objc func imgTapped() {
         launchImgPicker()
@@ -51,6 +73,10 @@ class AddEditProductsVC: UIViewController {
                 simpleAlert(title: "Missing Fields", msg: "Please fill out all required fields.")
                 return
         }
+        
+        self.name = name
+        self.productDescription = description
+        self.price = price
         
         activityIndicator.startAnimating()
         
@@ -82,16 +108,38 @@ class AddEditProductsVC: UIViewController {
                 guard let url = url else { return }
                 print(url)
                 // Step 6: Upload new Product document to the Firestore products collection.
+                self.uploadDocument(url: url.absoluteString)
             }
-            
         }
-        
-        
-        
     }
     
-    func uploadDocument() {
+    func uploadDocument(url: String) {
+        var docRef: DocumentReference!
+        var product = Product.init(name: name,
+                                   id: "",
+                                   category: selectedCategory.id,
+                                   price: price,
+                                   productDescription: productDescription,
+                                   imageUrl: url)
         
+        if let productToEdit = productToEdit {
+            // We are editing a product
+            docRef = Firestore.firestore().collection("products").document(productToEdit.id)
+            product.id = productToEdit.id
+        } else {
+            // We are adding a new product
+            docRef = Firestore.firestore().collection("products").document()
+            product.id = docRef.documentID
+        }
+        
+        let data = Product.modelToData(product: product)
+        docRef.setData(data, merge: true) { (error) in
+            if let error = error {
+                self.handleError(error: error, msg: "Unable to upload Firestore document.")
+                return
+            }
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     func handleError(error: Error, msg: String) {
@@ -100,6 +148,8 @@ class AddEditProductsVC: UIViewController {
         self.activityIndicator.stopAnimating()
     }
 }
+
+// MARK:- Extentions
 
 extension AddEditProductsVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
