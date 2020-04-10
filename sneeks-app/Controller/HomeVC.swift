@@ -132,7 +132,12 @@ class HomeVC: UIViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: StoryboardId.LoginVC)
         present(controller, animated: true, completion: nil)
     }
-
+    
+    @IBAction func favoritesClicked(_ sender: Any) {
+        performSegue(withIdentifier: Segues.ToFavorites, sender: self)
+        
+    }
+    
     @IBAction func loginOutClicked(_ sender: Any) {
         
         guard let user = Auth.auth().currentUser else { return }
@@ -215,6 +220,11 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         if segue.identifier == Segues.ToProducts {
             if let destination = segue.destination as? ProductsVC {
                 destination.category = selectedCategory
+            }
+        } else if segue.identifier == Segues.ToFavorites {
+            if let destination = segue.destination as? ProductsVC {
+                destination.category = selectedCategory
+                destination.showFavorites = true
             }
         }
     }

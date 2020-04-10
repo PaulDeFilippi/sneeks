@@ -14,7 +14,8 @@ let UserService = _UserService()
 
 final class _UserService {
     
-    // Properties
+    // MARK:- Properties
+
     var user = User()
     var favorites = [Product]()
     let auth = Auth.auth()
@@ -33,6 +34,8 @@ final class _UserService {
         }
     }
     
+        // MARK:- Actions
+
     func getCurrentUser() {
         guard let authUser = auth.currentUser else { return }
         
@@ -62,6 +65,22 @@ final class _UserService {
                 self.favorites.append(favorite)
             })
         })
+    }
+    
+    func favoriteSelected(product: Product) {
+        let favsRef = Firestore.firestore().collection("users").document(user.id).collection("favorites")
+        
+        if favorites.contains(product) {
+            // We remove it as a favorite
+            favorites.removeAll{ $0 == product }
+            favsRef.document(product.id).delete()
+        } else {
+            // Add as a favorite
+            favorites.append(product)
+            let data = Product.modelToData(product: product)
+            favsRef.document(product.id).setData(data)
+        }
+        
     }
     
     func logoutUser() {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K4W-OQ-xJ4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K4W-OQ-xJ4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -58,7 +58,11 @@
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem image="bar_button_cart" id="9F3-ZJ-0Tf"/>
-                            <barButtonItem image="bar_button_star" id="LRE-IS-KyD"/>
+                            <barButtonItem image="bar_button_star" id="LRE-IS-KyD">
+                                <connections>
+                                    <action selector="favoritesClicked:" destination="BYZ-38-t0r" id="0Xi-hT-Zg7"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -66,6 +70,7 @@
                         <outlet property="collectionView" destination="0J4-pp-XCm" id="h0H-Tg-R7U"/>
                         <outlet property="loginOutBtn" destination="Zcs-Gg-jJZ" id="Lvp-qi-2eU"/>
                         <segue destination="ggJ-EA-x5W" kind="show" identifier="toProductsVC" id="azK-YO-cjF"/>
+                        <segue destination="ggJ-EA-x5W" kind="show" identifier="ToFavorites" id="Rq5-bP-aAl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -131,6 +136,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rq5-bP-aAl"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="bar_button_cart" width="27" height="24"/>
         <image name="bar_button_star" width="26" height="26"/>
