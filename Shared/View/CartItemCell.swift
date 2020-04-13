@@ -20,10 +20,18 @@ class CartItemCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureCell(product: Product) {
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        
+        if let price = formatter.string(from: product.price as NSNumber) {
+            productTitleLbl.text = "\(product.name) \(price)"
+        }
+        
+        if let url = URL(string: product.imageUrl) {
+            productImg.kf.setImage(with: url)
+        }
     }
     
     @IBAction func removeItemClicked(_ sender: Any) {
