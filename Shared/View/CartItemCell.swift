@@ -8,20 +8,34 @@
 
 import UIKit
 
+protocol CartItemDelegate: class {
+    func removeItem(product: Product)
+}
+
 class CartItemCell: UITableViewCell {
-    
     
     @IBOutlet weak var productImg: RoundedImageView!
     @IBOutlet weak var productTitleLbl: UILabel!
     @IBOutlet weak var removeItemBtn: UIButton!
     
+    // MARK:- Properties
+    
+    private var item: Product!
+    weak var delegate: CartItemDelegate?
+    
+    // MARK:- Initialization
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    // MARK:- Actions
 
-    func configureCell(product: Product) {
-        
+    func configureCell(product: Product, delegate: CartItemDelegate) {
+        self.delegate = delegate
+        self.item = product
+
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         
@@ -35,6 +49,7 @@ class CartItemCell: UITableViewCell {
     }
     
     @IBAction func removeItemClicked(_ sender: Any) {
+        delegate?.removeItem(product: item)
         
     }
     

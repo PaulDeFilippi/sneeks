@@ -240,7 +240,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l8B-BK-bMr">
-                                <rect key="frame" x="20" y="108" width="374" height="392"/>
+                                <rect key="frame" x="6" y="108" width="402" height="392"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -250,12 +250,12 @@
                             <constraint firstItem="8jG-Nb-fNH" firstAttribute="leading" secondItem="7Ud-Xe-gbw" secondAttribute="leading" constant="20" id="EAz-u5-CHb"/>
                             <constraint firstItem="xOp-uA-gZz" firstAttribute="centerX" secondItem="4Mm-4v-4Ki" secondAttribute="centerX" id="EIm-Zf-OgK"/>
                             <constraint firstItem="7Ud-Xe-gbw" firstAttribute="trailing" secondItem="8jG-Nb-fNH" secondAttribute="trailing" constant="20" id="HnW-SB-0tO"/>
-                            <constraint firstItem="7Ud-Xe-gbw" firstAttribute="trailing" secondItem="l8B-BK-bMr" secondAttribute="trailing" constant="20" id="L3n-Vd-9El"/>
+                            <constraint firstItem="7Ud-Xe-gbw" firstAttribute="trailing" secondItem="l8B-BK-bMr" secondAttribute="trailing" constant="6" id="L3n-Vd-9El"/>
                             <constraint firstItem="l8B-BK-bMr" firstAttribute="top" secondItem="7Ud-Xe-gbw" secondAttribute="top" constant="20" id="Tp1-Rt-hLB"/>
                             <constraint firstItem="8jG-Nb-fNH" firstAttribute="top" secondItem="xOp-uA-gZz" secondAttribute="bottom" constant="10" id="Ydq-Wt-YEB"/>
                             <constraint firstItem="49B-P5-ngZ" firstAttribute="top" secondItem="l8B-BK-bMr" secondAttribute="bottom" constant="20" id="Zlw-Rp-wxp"/>
                             <constraint firstItem="7Ud-Xe-gbw" firstAttribute="bottom" secondItem="8jG-Nb-fNH" secondAttribute="bottom" constant="20" id="ljf-ZM-5FL"/>
-                            <constraint firstItem="l8B-BK-bMr" firstAttribute="leading" secondItem="7Ud-Xe-gbw" secondAttribute="leading" constant="20" id="mOr-WP-NK5"/>
+                            <constraint firstItem="l8B-BK-bMr" firstAttribute="leading" secondItem="7Ud-Xe-gbw" secondAttribute="leading" constant="6" id="mOr-WP-NK5"/>
                             <constraint firstItem="8jG-Nb-fNH" firstAttribute="top" secondItem="49B-P5-ngZ" secondAttribute="bottom" constant="68" id="oEQ-Dh-J2i"/>
                             <constraint firstItem="49B-P5-ngZ" firstAttribute="leading" secondItem="7Ud-Xe-gbw" secondAttribute="leading" constant="20" id="xpu-IY-9Md"/>
                         </constraints>
@@ -344,7 +344,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="azK-YO-cjF"/>
-        <segue reference="y0q-Pp-LvX"/>
+        <segue reference="cER-AL-LW7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bar_button_cart" width="27" height="24"/>
