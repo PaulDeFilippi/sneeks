@@ -45,6 +45,7 @@
 		4FE0FB6423D2754500644172 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0FB6123D2754500644172 /* ProductCell.swift */; };
 		4FE0FB6523D2754500644172 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0FB6223D2754500644172 /* ProductCell.xib */; };
 		4FE0FB6623D2754500644172 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0FB6223D2754500644172 /* ProductCell.xib */; };
+		4FEEBF6A2448EA0C00504BC3 /* StripeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEBF692448EA0C00504BC3 /* StripeApi.swift */; };
 		4FF5ADF423C685CF00B98A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF323C685CF00B98A20 /* AppDelegate.swift */; };
 		4FF5ADF823C685CF00B98A20 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF723C685CF00B98A20 /* HomeVC.swift */; };
 		4FF5ADFB23C685CF00B98A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF923C685CF00B98A20 /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 		4FDB1C6023E252A600EC9DE6 /* AddEditCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCategoryVC.swift; sourceTree = "<group>"; };
 		4FE0FB6123D2754500644172 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		4FE0FB6223D2754500644172 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		4FEEBF692448EA0C00504BC3 /* StripeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StripeApi.swift; sourceTree = "<group>"; };
 		4FF5ADF023C685CF00B98A20 /* sneeks-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sneeks-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF5ADF323C685CF00B98A20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FF5ADF723C685CF00B98A20 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				4FC7763B244392F2003F2257 /* StripeCart.swift */,
+				4FEEBF692448EA0C00504BC3 /* StripeApi.swift */,
 			);
 			path = Stripe;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				4FC7763C244392F2003F2257 /* StripeCart.swift in Sources */,
 				4FA8698023CE8DE1009D3C62 /* Firebase+Utils.swift in Sources */,
 				4FDB1C5723DFB95C00EC9DE6 /* ProductDetailVC.swift in Sources */,
+				4FEEBF6A2448EA0C00504BC3 /* StripeApi.swift in Sources */,
 				4FA8698323CF9920009D3C62 /* Category.swift in Sources */,
 				4FF5ADF823C685CF00B98A20 /* HomeVC.swift in Sources */,
 				4FCE0EC9243A7E4000BD6D32 /* User.swift in Sources */,
