@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Stripe
 
 class CheckoutVC: UIViewController, CartItemDelegate {
     
@@ -21,6 +22,9 @@ class CheckoutVC: UIViewController, CartItemDelegate {
     @IBOutlet weak var totalLbl: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    // MARK:- Properties
+    
+    var paymentContext: STPPaymentContext!
     
     // MARK:- Lifecycle
 
@@ -28,6 +32,7 @@ class CheckoutVC: UIViewController, CartItemDelegate {
         super.viewDidLoad()
         setupTableView()
         setupPaymentInfo()
+        setupStripeConfig()
     }
     
     // MARK:- Actions
@@ -45,15 +50,19 @@ class CheckoutVC: UIViewController, CartItemDelegate {
         totalLbl.text = StripeCart.total.penniesToFormattedCurrency()
     }
     
-    @IBAction func placeOrderClicked(_ sender: Any) {
+    func setupStripeConfig() {
         
-    }
-    
-    @IBAction func paymentMethodClicked(_ sender: Any) {
+        let config = STPPaymentConfiguration.shared()
+        //config.createCardSources = true
+        config.requiredBillingAddressFields = .none
+        config.requiredShippingAddressFields = [.postalAddress]
+
+        let customerContext = STPCustomerContext(keyProvider: StripeApi)
+        paymentContext = STPPaymentContext(customerContext: customerContext, configuration: config, theme: .default())
+        paymentContext.paymentAmount = StripeCart.total
+        paymentContext.delegate = self
+        paymentContext.hostViewController = self
         
-    }
-    
-    @IBAction func shippingMethodClicked(_ sender: Any) {
         
     }
     
@@ -61,7 +70,42 @@ class CheckoutVC: UIViewController, CartItemDelegate {
         StripeCart.removeItemFromCart(item: product)
         tableView.reloadData()
         setupPaymentInfo()
+        paymentContext.paymentAmount = StripeCart.total
     }
+    
+    @IBAction func placeOrderClicked(_ sender: Any) {
+        
+    }
+    
+    @IBAction func paymentMethodClicked(_ sender: Any) {
+        paymentContext.pushPaymentOptionsViewController()
+    }
+    
+    @IBAction func shippingMethodClicked(_ sender: Any) {
+        paymentContext.pushShippingViewController()
+        
+    }
+    
+}
+
+extension CheckoutVC: STPPaymentContextDelegate {
+    func paymentContextDidChange(_ paymentContext: STPPaymentContext) {
+        
+    }
+    
+    func paymentContext(_ paymentContext: STPPaymentContext, didFailToLoadWithError error: Error) {
+        
+    }
+    
+    func paymentContext(_ paymentContext: STPPaymentContext, didCreatePaymentResult paymentResult: STPPaymentResult, completion: @escaping STPPaymentStatusBlock) {
+        
+    }
+    
+    func paymentContext(_ paymentContext: STPPaymentContext, didFinishWith status: STPPaymentStatus, error: Error?) {
+        
+    }
+    
+    
 }
 
 extension CheckoutVC: UITableViewDelegate, UITableViewDataSource {
@@ -85,8 +129,5 @@ extension CheckoutVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-    
 
-    
-    
 }
