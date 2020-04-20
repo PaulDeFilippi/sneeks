@@ -46,6 +46,9 @@
 		4FE0FB6523D2754500644172 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0FB6223D2754500644172 /* ProductCell.xib */; };
 		4FE0FB6623D2754500644172 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FE0FB6223D2754500644172 /* ProductCell.xib */; };
 		4FEEBF6A2448EA0C00504BC3 /* StripeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEBF692448EA0C00504BC3 /* StripeApi.swift */; };
+		4FEEBF6B244E21B600504BC3 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCE0ECB243D087600BD6D32 /* UserService.swift */; };
+		4FEEBF6C244E21E000504BC3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCE0EC8243A7E4000BD6D32 /* User.swift */; };
+		4FEEBF6D244E221500504BC3 /* StripeCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FC7763B244392F2003F2257 /* StripeCart.swift */; };
 		4FF5ADF423C685CF00B98A20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF323C685CF00B98A20 /* AppDelegate.swift */; };
 		4FF5ADF823C685CF00B98A20 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF723C685CF00B98A20 /* HomeVC.swift */; };
 		4FF5ADFB23C685CF00B98A20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5ADF923C685CF00B98A20 /* Main.storyboard */; };
@@ -560,13 +563,16 @@
 				4FDB1C5A23E24DDB00EC9DE6 /* RoundedViews.swift in Sources */,
 				4FA8698E23CFDBA8009D3C62 /* ProductsVC.swift in Sources */,
 				4FDB1C5923E249BF00EC9DE6 /* HomeVC.swift in Sources */,
+				4FEEBF6B244E21B600504BC3 /* UserService.swift in Sources */,
 				4FF5AE0E23C6926300B98A20 /* AppDelegate.swift in Sources */,
+				4FEEBF6D244E221500504BC3 /* StripeCart.swift in Sources */,
 				4FF7A3DE23E62234009564CD /* AdminProductsVC.swift in Sources */,
 				4FA8698423CF9920009D3C62 /* Category.swift in Sources */,
 				4FDB1C6123E252A600EC9DE6 /* AddEditCategoryVC.swift in Sources */,
 				4FDB1C5C23E24E0500EC9DE6 /* Extentions.swift in Sources */,
 				4FE0FB6423D2754500644172 /* ProductCell.swift in Sources */,
 				4FA8698823CF9DA3009D3C62 /* CategoryCell.swift in Sources */,
+				4FEEBF6C244E21E000504BC3 /* User.swift in Sources */,
 				4FDB1C5E23E24E5900EC9DE6 /* ProductDetailVC.swift in Sources */,
 				4FF7A3E023E747F2009564CD /* AddEditProductsVC.swift in Sources */,
 				4FA8699123CFDC53009D3C62 /* Product.swift in Sources */,
